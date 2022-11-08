@@ -359,6 +359,28 @@ files:
         }
     }
   learner_created: false
+- name: src/machine/firstExerciseCopy.kt
+  visible: true
+  text: "package machine\n\n//fun main() {\n//\tprintln(\"Starting to make a coffee\\\
+    n\" +\n//\t\t\t\"Grinding coffee beans\\n\" +\n//\t\t\t\"Boiling water\\n\" +\n\
+    //\t\t\t\"Mixing boiled water with crushed coffee beans\\n\" +\n//\t\t\t\"Pouring\
+    \ coffee into the cup\\n\" +\n//\t\t\t\"Pouring some milk into the cup\\n\" +\n\
+    //\t\t\t\"Coffee is ready!\")\n//}\n"
+  learner_created: true
+- name: src/machine/secondExerciseCopy.kt
+  visible: true
+  text: "package machine\n\n//fun main() {\n//\tprintln(\"Write how many cups of coffee\
+    \ you will need: \")\n//\tval getFromUser = readln().toInt()\n//\tprintln(\"For\
+    \ $getFromUser cups of coffee you will need:\\n\" +\n//\t\t\t\"${200 * getFromUser}\
+    \ ml of water\\n\" +\n//\t\t\t\"${50 * getFromUser} ml of milk\\n\" +\n//\t\t\t\
+    \"${15 * getFromUser} of coffee beans\\n\")\n//\n//}\n"
+  learner_created: true
+- name: src/machine/stageThreeOldMain.kt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/5662#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 08 Nov 2022 20:48:45 UTC"
 record: -1
