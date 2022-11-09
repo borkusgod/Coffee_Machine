@@ -9,8 +9,8 @@ fun main() {
 //	val coffMachLevels = mutableListOf<Int>()
 //	coffMachLevels.addAll(coffMachStart)
 	val copyOfMachStartList = coffMachStart.toMutableList()
-	val doWhat = getAction()
-	println(doWhat)
+//	val doWhat = getAction()
+//	println(doWhat)
 //	when (doWhat) {
 //		"buy" -> buy(copyOfMachStartList)
 //		"fill" -> fill(copyOfMachStartList)
@@ -20,8 +20,9 @@ fun main() {
 //		else -> println("")
 //	}
 
-	val getCommands = true
-	while (getCommands) {
+	val whileVar = true
+	while (whileVar) {
+		val doWhat = getAction()
 		if (doWhat == "buy") {
 			buy(copyOfMachStartList)
 		} else if (doWhat == "fill") {
@@ -29,12 +30,13 @@ fun main() {
 		} else if (doWhat == "take") {
 			take(copyOfMachStartList)
 		} else if (doWhat == "remaining") {
-			take(copyOfMachStartList)
-		} else {
+			initialPrintout(copyOfMachStartList)
+		} else if (doWhat == "exit") {
 			break
 		}
 	}
 
+}
 
 fun initialPrintout(fromMain: List<Int>) {
 	println("The coffee machine has:")
@@ -46,7 +48,7 @@ fun initialPrintout(fromMain: List<Int>) {
 }
 
 fun getAction(): String {
-	println("Write an action (buy, fill, take, remaining):")
+	println("Write an action (buy, fill, take, remaining, exit):")
 	val getFromUser = readln()
 	return getFromUser
 }
@@ -59,11 +61,30 @@ fun buy(fromMain: List<Int>) {
 
 	// functions for each action
 	fun buyEsp(fromMain: List<Int>) {
-		println("${fromMain[0] - espresso[0]} ml of water")
-		println("${fromMain[1]} ml of milk")
-		println("${fromMain[2] - espresso[1]} g of coffee beans")
-		println("${fromMain[3] - 1} disposable cups")
-		println("${fromMain[4] + espresso[2]} of money")
+//		println("${fromMain[0] - espresso[0]} ml of water")
+//		println("${fromMain[1]} ml of milk")
+//		println("${fromMain[2] - espresso[1]} g of coffee beans")
+//		println("${fromMain[3] - 1} disposable cups")
+//		println("${fromMain[4] + espresso[2]} of money")
+		if (
+		fromMain[0] > espresso[0] &&
+		fromMain[2] > espresso[2]
+		) {
+			println("Placeholder for machine has more then wanted")
+			// make the coffee and deduct the amount from the machine totals and return. This will reset machine totals
+		} else if (
+		fromMain[0] == espresso[0] &&
+		fromMain[2] == espresso[2]
+		) {
+			println("I have enough resources, making you a coffee!")
+			// make coffee and adjust machine totals accordingly
+		} else if (
+			fromMain[0] < espresso[0] &&
+			fromMain[2] < espresso[2]
+		) {
+			println("Sorry, not enough \$fill in list element(s) that are lacking")
+		}
+
 	}
 
 	fun buyLat(fromMain: List<Int>) {

@@ -369,19 +369,68 @@ feedback_link: https://hyperskill.org/learn/step/5663#comment
 status: Failed
 feedback:
   message: |-
-    Error in test #1
+    Wrong answer in test #1
 
-    Infinite loop detected.
-    Last 96 lines your program printed have 12 blocks of 8 lines of the same text.
+    There should be two lines with &quot;milk&quot;, found: 7
 
     Please find below the output of your program during this failed test.
     Note that the &#39;&gt;&#39; character indicates the beginning of the input line.
 
     ---
 
-    Write an action (buy, fill, take, remaining):
+    Write an action (buy, fill, take, remaining, exit):
     &gt; remaining
-    remaining
+    The coffee machine has:
+    400 ml of water
+    540 ml of milk
+    120 g of coffee beans
+    9 disposable cups
+    $550 of money
+    Write an action (buy, fill, take, remaining, exit):
+    &gt; buy
+    What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:
+    &gt; 2
+    50 ml of water
+    465 ml of milk
+    100 g of coffee beans
+    8 disposable cups
+    557 of money
+    Write an action (buy, fill, take, remaining, exit):
+    &gt; buy
+    What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:
+    &gt; 2
+    50 ml of water
+    465 ml of milk
+    100 g of coffee beans
+    8 disposable cups
+    557 of money
+    Write an action (buy, fill, take, remaining, exit):
+    &gt; fill
+    Write how many ml of water you want to add:
+    &gt; 1000
+    Write how many ml of water you want to add:
+    &gt; 0
+    Write how many ml of water you want to add:
+    &gt; 0
+    Write how many ml of water you want to add:
+    &gt; 0
+    The coffee machine has:
+    1400 of water
+    540 of milk
+    120 of coffee beans
+    9 of disposable cups
+    $550 of money
+    Write an action (buy, fill, take, remaining, exit):
+    &gt; buy
+    What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:
+    &gt; 2
+    50 ml of water
+    465 ml of milk
+    100 g of coffee beans
+    8 disposable cups
+    557 of money
+    Write an action (buy, fill, take, remaining, exit):
+    &gt; take
     I gave you $550
 
     The coffee machine has:
@@ -390,96 +439,15 @@ feedback:
     120 g of coffee beans
     9 disposable cups
     $0 of money
-    I gave you $550
-
+    Write an action (buy, fill, take, remaining, exit):
+    &gt; remaining
     The coffee machine has:
     400 ml of water
     540 ml of milk
     120 g of coffee beans
     9 disposable cups
-    $0 of money
-    I gave you $550
-
-    The coffee machine has:
-    400 ml of water
-    540 ml of milk
-    120 g of coffee beans
-    9 disposable cups
-    $0 of money
-    I gave you $550
-
-    The coffee machine has:
-    400 ml of water
-    540 ml of milk
-    120 g of coffee beans
-    9 disposable cups
-    $0 of money
-    I gave you $550
-
-    The coffee machine has:
-    400 ml of water
-    540 ml of milk
-    120 g of coffee beans
-    9 disposable cups
-    $0 of money
-    I gave you $550
-
-    The coffee machine has:
-    400 ml of water
-    540 ml of milk
-    120 g of coffee beans
-    9 disposable cups
-    $0 of money
-    I gave you $550
-
-    The coffee machine has:
-    400 ml of water
-    540 ml of milk
-    120 g of coffee beans
-    9 disposable cups
-    $0 of money
-    I gave you $550
-
-    The coffee machine has:
-    400 ml of water
-    540 ml of milk
-    120 g of coffee beans
-    9 disposable cups
-    $0 of money
-    I gave you $550
-
-    The coffee machine has:
-    400 ml of water
-    540 ml of milk
-    120 g of coffee beans
-    9 disposable cups
-    $0 of money
-    I gave you $550
-
-    The coffee machine has:
-    400 ml of water
-    540 ml of milk
-    120 g of coffee beans
-    9 disposable cups
-    $0 of money
-    I gave you $550
-
-    The coffee machine has:
-    400 ml of water
-    540 ml of milk
-    120 g of coffee beans
-    9 disposable cups
-    $0 of money
-    I gave you $550
-
-    The coffee machine has:
-    400 ml of water
-    540 ml of milk
-    120 g of coffee beans
-    9 disposable cups
-    $0 of money
-    I gave you $550
-
-    The coffee machine has:
-  time: "Wed, 09 Nov 2022 20:48:53 UTC"
+    $550 of money
+    Write an action (buy, fill, take, remaining, exit):
+    &gt; exit
+  time: "Wed, 09 Nov 2022 21:29:06 UTC"
 record: -1
