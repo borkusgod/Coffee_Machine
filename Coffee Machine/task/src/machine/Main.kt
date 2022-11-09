@@ -1,18 +1,40 @@
 package machine
 
+
+
 fun main() {
 	// map for list - water, milk, coffee bean, disposable cups, money
 	val coffMachStart = listOf(400, 540, 120, 9, 550)
-	initialPrintout(coffMachStart)
+	// copy coffMachStart into this and use until exit so you can maintain levels
+//	val coffMachLevels = mutableListOf<Int>()
+//	coffMachLevels.addAll(coffMachStart)
+	val copyOfMachStartList = coffMachStart.toMutableList()
 	val doWhat = getAction()
 	println(doWhat)
-	when (doWhat) {
-		"buy" -> buy(coffMachStart)
-		"fill" -> fill(coffMachStart)
-		"take" -> take(coffMachStart)
-		else -> println("")
+//	when (doWhat) {
+//		"buy" -> buy(copyOfMachStartList)
+//		"fill" -> fill(copyOfMachStartList)
+//		"take" -> take(copyOfMachStartList)
+//		"remaining" -> initialPrintout(copyOfMachStartList)
+//		"exit" -> println("")
+//		else -> println("")
+//	}
+
+	val getCommands = true
+	while (getCommands) {
+		if (doWhat == "buy") {
+			buy(copyOfMachStartList)
+		} else if (doWhat == "fill") {
+			fill(copyOfMachStartList)
+		} else if (doWhat == "take") {
+			take(copyOfMachStartList)
+		} else if (doWhat == "remaining") {
+			take(copyOfMachStartList)
+		} else {
+			break
+		}
 	}
-}
+
 
 fun initialPrintout(fromMain: List<Int>) {
 	println("The coffee machine has:")
@@ -24,7 +46,7 @@ fun initialPrintout(fromMain: List<Int>) {
 }
 
 fun getAction(): String {
-	println("Write an action (buy, fill, take):")
+	println("Write an action (buy, fill, take, remaining):")
 	val getFromUser = readln()
 	return getFromUser
 }

@@ -378,9 +378,12 @@ files:
 - name: src/machine/stageThreeOldMain.kt
   visible: true
   learner_created: true
+- name: src/machine/stageFourOldMain.kt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/5662#comment
 status: Solved
 feedback:
   message: Congratulations!
   time: "Tue, 08 Nov 2022 20:48:45 UTC"
-record: -1
+record: 4

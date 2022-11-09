@@ -275,6 +275,211 @@ files:
         }
     }
   learner_created: false
+- name: src/machine/stageThreeOldMain.kt
+  visible: true
+  text: "package machine\n\n//fun main() {\n//\t// base line for cup of coffee\n//\t\
+    val waterML = 200\n//\tval milkML = 50\n//\tval coffeeG = 15\n//\t// this will\
+    \ get how much supply the coffee machine has to work with\n//\tprintln(\"Write\
+    \ how many ml of water the coffee machine has: \")\n//\t// convert each to an\
+    \ int to be able to do math on it\n//\tval machWater = (readln().toInt())\n//\t\
+    val machWaterInCups = machWater / waterML\n//\tprintln(\"Write how many ml of\
+    \ milk the coffee machine has: \")\n//\tval machMilk = (readln().toInt())\n//\t\
+    val machMilkInCups = machMilk / milkML\n//\tprintln(\"Write how many grams of\
+    \ coffee beans the coffee machine has: \")\n//\tval machCoffee = (readln().toInt())\n\
+    //\tval machCoffeeInCups = machCoffee / coffeeG\n//\t// This tells you how many\
+    \ cups the machine can make with current ingredients\n//\tval machHasCups = listOf<Int>(machWaterInCups,\
+    \ machMilkInCups, machCoffeeInCups)\n//\tval machHasCupsSorted = machHasCups.sorted()\n\
+    //\tval machCanMake = machHasCupsSorted[0]\n//\t// asks the user how much the\
+    \ customer is asking for cups of coffee\n//\tprintln(\"Write how many cups of\
+    \ coffee you will need: \")\n//\tval numCups = readln().toInt()\n//\n//\tif (machCanMake\
+    \ > numCups) {\n//\t\tval andThenSome = machCanMake - numCups\n//\t\tprintln(\"\
+    Yes, I can make that amount of coffee (and even $andThenSome more than that\"\
+    )\n//\t} else if (machCanMake == numCups) {\n//\t\tprintln(\"Yes, I can make that\
+    \ amount of coffee\")\n//\t} else {\n//\t\tprintln(\"No, I can make only $machCanMake\
+    \ cups of coffee\")\n//\t}\n//\n//}"
+  learner_created: true
+- name: src/machine/firstExerciseCopy.kt
+  visible: true
+  text: "package machine\n\n//fun main() {\n//\tprintln(\"Starting to make a coffee\\\
+    n\" +\n//\t\t\t\"Grinding coffee beans\\n\" +\n//\t\t\t\"Boiling water\\n\" +\n\
+    //\t\t\t\"Mixing boiled water with crushed coffee beans\\n\" +\n//\t\t\t\"Pouring\
+    \ coffee into the cup\\n\" +\n//\t\t\t\"Pouring some milk into the cup\\n\" +\n\
+    //\t\t\t\"Coffee is ready!\")\n//}\n"
+  learner_created: true
+- name: src/machine/secondExerciseCopy.kt
+  visible: true
+  text: "package machine\n\n//fun main() {\n//\tprintln(\"Write how many cups of coffee\
+    \ you will need: \")\n//\tval getFromUser = readln().toInt()\n//\tprintln(\"For\
+    \ $getFromUser cups of coffee you will need:\\n\" +\n//\t\t\t\"${200 * getFromUser}\
+    \ ml of water\\n\" +\n//\t\t\t\"${50 * getFromUser} ml of milk\\n\" +\n//\t\t\t\
+    \"${15 * getFromUser} of coffee beans\\n\")\n//\n//}\n"
+  learner_created: true
+- name: src/machine/stageFourOldMain.kt
+  visible: true
+  text: "package machine\n\n//fun main() {\n//\t// map for list - water, milk, coffee\
+    \ bean, disposable cups, money\n//\tval coffMachStart = listOf(400, 540, 120,\
+    \ 9, 550)\n//\tinitialPrintout(coffMachStart)\n//\tval doWhat = getAction()\n\
+    //\tprintln(doWhat)\n//\twhen (doWhat) {\n//\t\t\"buy\" -> buy(coffMachStart)\n\
+    //\t\t\"fill\" -> fill(coffMachStart)\n//\t\t\"take\" -> take(coffMachStart)\n\
+    //\t\telse -> println(\"\")\n//\t}\n//}\n//\n//fun initialPrintout(fromMain: List<Int>)\
+    \ {\n//\tprintln(\"The coffee machine has:\")\n//\tprintln(\"${fromMain[0]} ml\
+    \ of water\")\n//\tprintln(\"${fromMain[1]} ml of milk\")\n//\tprintln(\"${fromMain[2]}\
+    \ g of coffee beans\")\n//\tprintln(\"${fromMain[3]} disposable cups\")\n//\t\
+    println(\"\\$${fromMain[4]} of money\")\n//}\n//\n//fun getAction(): String {\n\
+    //\tprintln(\"Write an action (buy, fill, take):\")\n//\tval getFromUser = readln()\n\
+    //\treturn getFromUser\n//}\n//\n//fun buy(fromMain: List<Int>) {\n//\t// drink\
+    \ types and values\n//\tval espresso = listOf<Int>(250, 16, 4) // water, coffee,\
+    \ price\n//\tval latte = listOf<Int>(350, 75, 20, 7) // water, milk, coffee, price\n\
+    //\tval cappuccino = listOf<Int>(200, 100, 12, 6) // water, milk, coffee, price\n\
+    //\n//\t// functions for each action\n//\tfun buyEsp(fromMain: List<Int>) {\n\
+    //\t\tprintln(\"${fromMain[0] - espresso[0]} ml of water\")\n//\t\tprintln(\"\
+    ${fromMain[1]} ml of milk\")\n//\t\tprintln(\"${fromMain[2] - espresso[1]} g of\
+    \ coffee beans\")\n//\t\tprintln(\"${fromMain[3] - 1} disposable cups\")\n//\t\
+    \tprintln(\"${fromMain[4] + espresso[2]} of money\")\n//\t}\n//\n//\tfun buyLat(fromMain:\
+    \ List<Int>) {\n//\t\tprintln(\"${fromMain[0] - latte[0]} ml of water\")\n//\t\
+    \tprintln(\"${fromMain[1] - latte[1]} ml of milk\")\n//\t\tprintln(\"${fromMain[2]\
+    \ - latte[2]} g of coffee beans\")\n//\t\tprintln(\"${fromMain[3] - 1} disposable\
+    \ cups\")\n//\t\tprintln(\"${fromMain[4] + latte[3]} of money\")\n//\t}\n//\n\
+    //\tfun buyCap(fromMain: List<Int>) {\n//\t\tprintln(\"${fromMain[0] - cappuccino[0]}\
+    \ ml of water\")\n//\t\tprintln(\"${fromMain[1] - cappuccino[1]} ml of milk\"\
+    )\n//\t\tprintln(\"${fromMain[2] - cappuccino[2]} g of coffee beans\")\n//\t\t\
+    println(\"${fromMain[3] - 1} disposable cups\")\n//\t\tprintln(\"${fromMain[4]\
+    \ + cappuccino[3]} of money\")\n//\t}\n//\n//\tprintln(\"What do you want to buy?\
+    \ 1 - espresso, 2 - latte, 3 - cappuccino:\")\n//\twhen (readln().toInt()) {\n\
+    //\t\t1 -> buyEsp(fromMain)\n//\t\t2 -> buyLat(fromMain)\n//\t\t3 -> buyCap(fromMain)\n\
+    //\t}\n//}\n//\n//fun fill(fromMain: List<Int>) {\n//\tval itemsInContainer =\
+    \ mutableListOf<Int>()\n//\tprintln(\"Write how many ml of water you want to add:\"\
+    )\n//\tval waterIn = readln().toInt()\n//\titemsInContainer.add(waterIn)\n//\t\
+    println(\"Write how many ml of water you want to add:\")\n//\tval milkIn = readln().toInt()\n\
+    //\titemsInContainer.add(milkIn)\n//\tprintln(\"Write how many ml of water you\
+    \ want to add:\")\n//\tval coffeeIn = readln().toInt()\n//\titemsInContainer.add(coffeeIn)\n\
+    //\tprintln(\"Write how many ml of water you want to add:\")\n//\tval disposableCupsIn\
+    \ = readln().toInt()\n//\titemsInContainer.add(disposableCupsIn)\n//\n//\tprintln(\"\
+    The coffee machine has:\")\n//\tprintln(\"${fromMain[0] + itemsInContainer[0]}\
+    \ of water\")\n//\tprintln(\"${fromMain[1] + itemsInContainer[1]} of milk\")\n\
+    //\tprintln(\"${fromMain[2] + itemsInContainer[2]} of coffee beans\")\n//\tprintln(\"\
+    ${fromMain[3] + itemsInContainer[3]} of disposable cups\")\n//\tprintln(\"$${fromMain[4]}\
+    \ of money\")\n//}\n//\n//fun take(fromMain: List<Int>) {\n//\tprintln(\"I gave\
+    \ you $${fromMain[4]}\\n\")\n//\tprintln(\"The coffee machine has:\")\n//\tprintln(\"\
+    ${fromMain[0]} ml of water\")\n//\tprintln(\"${fromMain[1]} ml of milk\")\n//\t\
+    println(\"${fromMain[2]} g of coffee beans\")\n//\tprintln(\"${fromMain[3]} disposable\
+    \ cups\")\n//\tprintln(\"$0 of money\")\n//}"
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/5663#comment
-status: Unchecked
+status: Failed
+feedback:
+  message: |-
+    Error in test #1
+
+    Infinite loop detected.
+    Last 96 lines your program printed have 12 blocks of 8 lines of the same text.
+
+    Please find below the output of your program during this failed test.
+    Note that the &#39;&gt;&#39; character indicates the beginning of the input line.
+
+    ---
+
+    Write an action (buy, fill, take, remaining):
+    &gt; remaining
+    remaining
+    I gave you $550
+
+    The coffee machine has:
+    400 ml of water
+    540 ml of milk
+    120 g of coffee beans
+    9 disposable cups
+    $0 of money
+    I gave you $550
+
+    The coffee machine has:
+    400 ml of water
+    540 ml of milk
+    120 g of coffee beans
+    9 disposable cups
+    $0 of money
+    I gave you $550
+
+    The coffee machine has:
+    400 ml of water
+    540 ml of milk
+    120 g of coffee beans
+    9 disposable cups
+    $0 of money
+    I gave you $550
+
+    The coffee machine has:
+    400 ml of water
+    540 ml of milk
+    120 g of coffee beans
+    9 disposable cups
+    $0 of money
+    I gave you $550
+
+    The coffee machine has:
+    400 ml of water
+    540 ml of milk
+    120 g of coffee beans
+    9 disposable cups
+    $0 of money
+    I gave you $550
+
+    The coffee machine has:
+    400 ml of water
+    540 ml of milk
+    120 g of coffee beans
+    9 disposable cups
+    $0 of money
+    I gave you $550
+
+    The coffee machine has:
+    400 ml of water
+    540 ml of milk
+    120 g of coffee beans
+    9 disposable cups
+    $0 of money
+    I gave you $550
+
+    The coffee machine has:
+    400 ml of water
+    540 ml of milk
+    120 g of coffee beans
+    9 disposable cups
+    $0 of money
+    I gave you $550
+
+    The coffee machine has:
+    400 ml of water
+    540 ml of milk
+    120 g of coffee beans
+    9 disposable cups
+    $0 of money
+    I gave you $550
+
+    The coffee machine has:
+    400 ml of water
+    540 ml of milk
+    120 g of coffee beans
+    9 disposable cups
+    $0 of money
+    I gave you $550
+
+    The coffee machine has:
+    400 ml of water
+    540 ml of milk
+    120 g of coffee beans
+    9 disposable cups
+    $0 of money
+    I gave you $550
+
+    The coffee machine has:
+    400 ml of water
+    540 ml of milk
+    120 g of coffee beans
+    9 disposable cups
+    $0 of money
+    I gave you $550
+
+    The coffee machine has:
+  time: "Wed, 09 Nov 2022 20:48:53 UTC"
 record: -1
