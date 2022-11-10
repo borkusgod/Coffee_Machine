@@ -50,8 +50,7 @@ fun pOutMachineTotals(fromMain: List<Int>) {
 
 fun getAction(): String {
 	println("Write an action (buy, fill, take, remaining, exit):")
-	val getFromUser = readln()
-	return getFromUser
+	return readln()
 }
 
 fun buy(fromMain: List<Int>): MutableList<Int> {
@@ -112,29 +111,44 @@ fun buy(fromMain: List<Int>): MutableList<Int> {
 	}
 
 	fun buyCap(fromMain: List<Int>): MutableList<Int> {
+//		println("${fromMain[0] - cappuccino[0]} ml of water")
+//		println("${fromMain[1] - cappuccino[1]} ml of milk")
+//		println("${fromMain[2] - cappuccino[2]} g of coffee beans")
+//		println("${fromMain[3] - 1} disposable cups")
+//		println("${fromMain[4] + cappuccino[3]} of money")
+
 		if (
-			fromMain[0] >= latte[0] &&
-			fromMain[1] >= latte[1] &&
-			fromMain[2] >= latte[2] &&
+			fromMain[0] >= cappuccino[0] &&
+			fromMain[1] >= cappuccino[1] &&
+			fromMain[2] >= cappuccino[2] &&
 			fromMain[3] >= 1
 		) {
 			println("I have enough resources, making you a coffee!")
 			// make the coffee and deduct the amount from the machine totals and return. This will reset machine totals
 			//val returnFromTrans = fromMain.toMutableList()
-			returnFromTrans[0] = fromMain[0] - latte[0]
-			returnFromTrans[2] = fromMain[2] - latte[1]
-			returnFromTrans[4] = fromMain[4] + latte[2]
+			returnFromTrans[0] = fromMain[0] - cappuccino[0]
+			returnFromTrans[2] = fromMain[2] - cappuccino[1]
+			returnFromTrans[4] = fromMain[4] + cappuccino[2]
 			returnFromTrans[3] - 1
 			return returnFromTrans
 		} else if (
-			fromMain[0] < latte[0] ||
-			fromMain[2] < latte[2]
+			fromMain[0] < cappuccino[0] ||
+			fromMain[2] < cappuccino[2]
 		) {
 
 			println("Sorry, not enough \$fill in list element(s) that are lacking")
 		}
 		return returnFromTrans
 	}
+
+	println("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:")
+	when (readln().toInt()) {
+		1 -> buyEsp(fromMain)
+		2 -> buyLat(fromMain)
+		3 -> buyCap(fromMain)
+	}
+	return returnFromTrans
+}
 
 fun fill(fromMain: List<Int>) {
 	val itemsInContainer = mutableListOf<Int>()
