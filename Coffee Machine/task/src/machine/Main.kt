@@ -5,10 +5,10 @@ package machine
 fun main() {
 	// map for list - water, milk, coffee bean, disposable cups, money
 	val coffMachStart = listOf(400, 540, 120, 9, 550)
-	// copy coffMachStart into this and use until exit so you can maintain levels
 //	val coffMachLevels = mutableListOf<Int>()
 //	coffMachLevels.addAll(coffMachStart)
-	val copyOfMachStartList = coffMachStart.toMutableList()
+	// copy coffMachStart into this and use until exit so you can maintain levels
+	var copyOfMachStartList = coffMachStart.toMutableList()
 //	val doWhat = getAction()
 //	println(doWhat)
 //	when (doWhat) {
@@ -24,13 +24,14 @@ fun main() {
 	while (whileVar) {
 		val doWhat = getAction()
 		if (doWhat == "buy") {
-			buy(copyOfMachStartList)
+			val getReturnBuy = buy(copyOfMachStartList)
+			copyOfMachStartList = getReturnBuy
 		} else if (doWhat == "fill") {
 			fill(copyOfMachStartList)
 		} else if (doWhat == "take") {
 			take(copyOfMachStartList)
 		} else if (doWhat == "remaining") {
-			initialPrintout(copyOfMachStartList)
+			pOutMachineTotals(copyOfMachStartList)
 		} else if (doWhat == "exit") {
 			break
 		}
@@ -38,7 +39,7 @@ fun main() {
 
 }
 
-fun initialPrintout(fromMain: List<Int>) {
+fun pOutMachineTotals(fromMain: List<Int>) {
 	println("The coffee machine has:")
 	println("${fromMain[0]} ml of water")
 	println("${fromMain[1]} ml of milk")
@@ -53,63 +54,87 @@ fun getAction(): String {
 	return getFromUser
 }
 
-fun buy(fromMain: List<Int>) {
+fun buy(fromMain: List<Int>): MutableList<Int> {
 	// drink types and values
 	val espresso = listOf<Int>(250, 16, 4) // water, coffee, price
 	val latte = listOf<Int>(350, 75, 20, 7) // water, milk, coffee, price
 	val cappuccino = listOf<Int>(200, 100, 12, 6) // water, milk, coffee, price
+	val returnFromTrans = fromMain.toMutableList() // list to return from transactions
 
 	// functions for each action
-	fun buyEsp(fromMain: List<Int>) {
-//		println("${fromMain[0] - espresso[0]} ml of water")
-//		println("${fromMain[1]} ml of milk")
-//		println("${fromMain[2] - espresso[1]} g of coffee beans")
-//		println("${fromMain[3] - 1} disposable cups")
-//		println("${fromMain[4] + espresso[2]} of money")
+	fun buyEsp(fromMain: List<Int>): MutableList<Int> {
 		if (
-		fromMain[0] > espresso[0] &&
-		fromMain[2] > espresso[2]
-		) {
-			println("Placeholder for machine has more then wanted")
-			// make the coffee and deduct the amount from the machine totals and return. This will reset machine totals
-		} else if (
-		fromMain[0] == espresso[0] &&
-		fromMain[2] == espresso[2]
+		fromMain[0] >= espresso[0] &&
+		fromMain[2] >= espresso[2] &&
+		fromMain[3] >= 1
 		) {
 			println("I have enough resources, making you a coffee!")
-			// make coffee and adjust machine totals accordingly
+			// make the coffee and deduct the amount from the machine totals and return. This will reset machine totals
+			returnFromTrans[0] = fromMain[0] - espresso[0]
+			returnFromTrans[2] = fromMain[2] - espresso[1]
+			returnFromTrans[3] - 1
+			returnFromTrans[4] = fromMain[4] + espresso[2]
+			return returnFromTrans
 		} else if (
-			fromMain[0] < espresso[0] &&
-			fromMain[2] < espresso[2]
+			fromMain[0] < espresso[0] ||
+			fromMain[2] < espresso[2] ||
+			fromMain[3] < 1
 		) {
+
 			println("Sorry, not enough \$fill in list element(s) that are lacking")
 		}
-
+		return returnFromTrans
 	}
 
-	fun buyLat(fromMain: List<Int>) {
-		println("${fromMain[0] - latte[0]} ml of water")
-		println("${fromMain[1] - latte[1]} ml of milk")
-		println("${fromMain[2] - latte[2]} g of coffee beans")
-		println("${fromMain[3] - 1} disposable cups")
-		println("${fromMain[4] + latte[3]} of money")
+	fun buyLat(fromMain: List<Int>): MutableList<Int> {
+		if (
+			fromMain[0] >= latte[0] &&
+			fromMain[1] >= latte[1] &&
+			fromMain[2] >= latte[2] &&
+			fromMain[3] >= 1
+		) {
+			println("I have enough resources, making you a coffee!")
+			// make the coffee and deduct the amount from the machine totals and return. This will reset machine totals
+			//val returnFromTrans = fromMain.toMutableList()
+			returnFromTrans[0] = fromMain[0] - latte[0]
+			returnFromTrans[2] = fromMain[2] - latte[1]
+			returnFromTrans[4] = fromMain[4] + latte[2]
+			returnFromTrans[3] - 1
+			return returnFromTrans
+		} else if (
+			fromMain[0] < latte[0] ||
+			fromMain[2] < latte[2]
+		) {
+
+			println("Sorry, not enough \$fill in list element(s) that are lacking")
+		}
+		return returnFromTrans
 	}
 
-	fun buyCap(fromMain: List<Int>) {
-		println("${fromMain[0] - cappuccino[0]} ml of water")
-		println("${fromMain[1] - cappuccino[1]} ml of milk")
-		println("${fromMain[2] - cappuccino[2]} g of coffee beans")
-		println("${fromMain[3] - 1} disposable cups")
-		println("${fromMain[4] + cappuccino[3]} of money")
-	}
+	fun buyCap(fromMain: List<Int>): MutableList<Int> {
+		if (
+			fromMain[0] >= latte[0] &&
+			fromMain[1] >= latte[1] &&
+			fromMain[2] >= latte[2] &&
+			fromMain[3] >= 1
+		) {
+			println("I have enough resources, making you a coffee!")
+			// make the coffee and deduct the amount from the machine totals and return. This will reset machine totals
+			//val returnFromTrans = fromMain.toMutableList()
+			returnFromTrans[0] = fromMain[0] - latte[0]
+			returnFromTrans[2] = fromMain[2] - latte[1]
+			returnFromTrans[4] = fromMain[4] + latte[2]
+			returnFromTrans[3] - 1
+			return returnFromTrans
+		} else if (
+			fromMain[0] < latte[0] ||
+			fromMain[2] < latte[2]
+		) {
 
-	println("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:")
-	when (readln().toInt()) {
-		1 -> buyEsp(fromMain)
-		2 -> buyLat(fromMain)
-		3 -> buyCap(fromMain)
+			println("Sorry, not enough \$fill in list element(s) that are lacking")
+		}
+		return returnFromTrans
 	}
-}
 
 fun fill(fromMain: List<Int>) {
 	val itemsInContainer = mutableListOf<Int>()

@@ -371,7 +371,7 @@ feedback:
   message: |-
     Wrong answer in test #1
 
-    There should be two lines with &quot;milk&quot;, found: 7
+    There should be two lines with &quot;milk&quot;, found: 4
 
     Please find below the output of your program during this failed test.
     Note that the &#39;&gt;&#39; character indicates the beginning of the input line.
@@ -390,20 +390,12 @@ feedback:
     &gt; buy
     What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:
     &gt; 2
-    50 ml of water
-    465 ml of milk
-    100 g of coffee beans
-    8 disposable cups
-    557 of money
+    I have enough resources, making you a coffee!
     Write an action (buy, fill, take, remaining, exit):
     &gt; buy
     What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:
     &gt; 2
-    50 ml of water
-    465 ml of milk
-    100 g of coffee beans
-    8 disposable cups
-    557 of money
+    Sorry, not enough $fill in list element(s) that are lacking
     Write an action (buy, fill, take, remaining, exit):
     &gt; fill
     Write how many ml of water you want to add:
@@ -415,39 +407,35 @@ feedback:
     Write how many ml of water you want to add:
     &gt; 0
     The coffee machine has:
-    1400 of water
+    1050 of water
     540 of milk
-    120 of coffee beans
+    45 of coffee beans
     9 of disposable cups
-    $550 of money
+    $570 of money
     Write an action (buy, fill, take, remaining, exit):
     &gt; buy
     What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:
     &gt; 2
-    50 ml of water
-    465 ml of milk
-    100 g of coffee beans
-    8 disposable cups
-    557 of money
+    Sorry, not enough $fill in list element(s) that are lacking
     Write an action (buy, fill, take, remaining, exit):
     &gt; take
-    I gave you $550
+    I gave you $570
 
     The coffee machine has:
-    400 ml of water
+    50 ml of water
     540 ml of milk
-    120 g of coffee beans
+    45 g of coffee beans
     9 disposable cups
     $0 of money
     Write an action (buy, fill, take, remaining, exit):
     &gt; remaining
     The coffee machine has:
-    400 ml of water
+    50 ml of water
     540 ml of milk
-    120 g of coffee beans
+    45 g of coffee beans
     9 disposable cups
-    $550 of money
+    $570 of money
     Write an action (buy, fill, take, remaining, exit):
     &gt; exit
-  time: "Wed, 09 Nov 2022 21:29:06 UTC"
+  time: "Thu, 10 Nov 2022 10:18:52 UTC"
 record: -1
