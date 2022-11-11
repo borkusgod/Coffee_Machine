@@ -365,77 +365,12 @@ files:
     println(\"${fromMain[2]} g of coffee beans\")\n//\tprintln(\"${fromMain[3]} disposable\
     \ cups\")\n//\tprintln(\"$0 of money\")\n//}"
   learner_created: true
+- name: src/machine/justForCopying.kt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/5663#comment
-status: Failed
+status: Solved
 feedback:
-  message: |-
-    Wrong answer in test #1
-
-    There should be two lines with &quot;milk&quot;, found: 4
-
-    Please find below the output of your program during this failed test.
-    Note that the &#39;&gt;&#39; character indicates the beginning of the input line.
-
-    ---
-
-    Write an action (buy, fill, take, remaining, exit):
-    &gt; remaining
-    The coffee machine has:
-    400 ml of water
-    540 ml of milk
-    120 g of coffee beans
-    9 disposable cups
-    $550 of money
-    Write an action (buy, fill, take, remaining, exit):
-    &gt; buy
-    What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:
-    &gt; 2
-    I have enough resources, making you a coffee!
-    Write an action (buy, fill, take, remaining, exit):
-    &gt; buy
-    What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:
-    &gt; 2
-    Sorry, not enough $fill in list element(s) that are lacking
-    Write an action (buy, fill, take, remaining, exit):
-    &gt; fill
-    Write how many ml of water you want to add:
-    &gt; 1000
-    Write how many ml of water you want to add:
-    &gt; 0
-    Write how many ml of water you want to add:
-    &gt; 0
-    Write how many ml of water you want to add:
-    &gt; 0
-    The coffee machine has:
-    1050 of water
-    540 of milk
-    45 of coffee beans
-    9 of disposable cups
-    $570 of money
-    Write an action (buy, fill, take, remaining, exit):
-    &gt; buy
-    What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:
-    &gt; 2
-    Sorry, not enough $fill in list element(s) that are lacking
-    Write an action (buy, fill, take, remaining, exit):
-    &gt; take
-    I gave you $570
-
-    The coffee machine has:
-    50 ml of water
-    540 ml of milk
-    45 g of coffee beans
-    9 disposable cups
-    $0 of money
-    Write an action (buy, fill, take, remaining, exit):
-    &gt; remaining
-    The coffee machine has:
-    50 ml of water
-    540 ml of milk
-    45 g of coffee beans
-    9 disposable cups
-    $570 of money
-    Write an action (buy, fill, take, remaining, exit):
-    &gt; exit
-  time: "Thu, 10 Nov 2022 11:29:14 UTC"
+  message: Congratulations!
+  time: "Fri, 11 Nov 2022 18:58:23 UTC"
 record: -1
